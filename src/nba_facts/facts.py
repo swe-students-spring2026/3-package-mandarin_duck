@@ -11,14 +11,23 @@ https://github.com/nyu-software-engineering/python-package-example/blob/main/src
 """
 
 import random
+import json
 
 def parseJSON():
     """
-    Parses JSON into dictionaries so facts can be fetched by other functions
+    Parses the data.json file
     """
-    return
+    with open("data.json") as f:
+        raw_data = json.load(f)
 
-def getFact():
+    facts = {}
+    for fact in raw_data:
+        if fact["team"] not in facts:
+            facts[fact["team"]] = []
+        facts[fact["team"]].append(fact)
+    return facts
+
+def getFact(data):
     """
     Returns a random fact about the NBA
     """
@@ -41,3 +50,4 @@ def getTeam(team):
     Returns a random fact about the NBA for the specified team
     """
     return
+parseJSON()
