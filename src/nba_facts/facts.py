@@ -31,23 +31,30 @@ def getFact(data):
     """
     Returns a random fact about the NBA
     """
-    return
+    randomTeam = random.choice(list(data.keys()))
+    fact = random.choice(data[randomTeam])["fact"]
+    return fact
 
-def getDecade(decade):
+def getDecade(data, decade):
     """
     Returns a random fact about the NBA for the specified decade
     """
-    return
+    decadeFacts = [fact for team in data.values() for fact in team if fact["decade"]== decade]
+    fact = random.choice(decadeFacts)["fact"]
+    return fact
 
-def getPosition(position):
+def getPosition(data, position):
     """
     Returns a random fact about the NBA for the specified position
     """
-    return
+    positionFacts = [fact for team in data.values() for fact in team if fact["position"]== position]
+    fact = random.choice(positionFacts)["fact"]
+    return fact
 
-def getTeam(team):
+def getTeam(data, team):
     """
     Returns a random fact about the NBA for the specified team
     """
-    return
-parseJSON()
+    teamFacts = [fact for team in data.values() for fact in team if fact["team"]== team]
+    fact = random.choice(teamFacts)["fact"]
+    return fact
