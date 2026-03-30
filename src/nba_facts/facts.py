@@ -12,12 +12,18 @@ https://github.com/nyu-software-engineering/python-package-example/blob/main/src
 
 import random
 import json
+import os
 
 def parseJSON():
     """
     Parses the data.json file
     """
-    with open("data.json") as f:
+
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    # Construct the full path to data.json
+    data_path = os.path.join(current_dir, "data.json")
+
+    with open(data_path) as f:
         raw_data = json.load(f)
 
     facts = {}
