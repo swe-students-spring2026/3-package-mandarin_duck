@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nba_facts" 
+version = "0.1.0" 
+description = "A Python package that provides NBA facts."
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Faizan Shamsi", email = "fs2453@nyu.edu" },
+    { name = "Adam", email = "adam@nyu.edu" },
+    { name = "Adam", email = "adam@nyu.edu" },
+    { name = "Jeffery", email = "jeffery@nyu.edu" },
+    { name = "Ishaan", email = "ishaan@nyu.edu" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/swe-students-spring2026/3-package-mandarin_duck" 
