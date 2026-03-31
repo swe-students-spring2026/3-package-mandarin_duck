@@ -11,10 +11,10 @@ requires-python = ">=3.7"
 license = { file = "LICENSE" }
 authors = [
     { name = "Faizan Shamsi", email = "fs2453@nyu.edu" },
-    { name = "Adam", email = "adam@nyu.edu" },
-    { name = "Adam", email = "adam@nyu.edu" },
-    { name = "Jeffery", email = "jeffery@nyu.edu" },
-    { name = "Ishaan", email = "ishaan@nyu.edu" }
+    { name = "Adam Shin", email = "aus2005@nyu.edu" },
+    { name = "Adam Soliman", email = "aes10130@nyu.edu" },
+    { name = "Jeffrey Solano", email = "jns9835@nyu.edu" },
+    { name = "Ishaan Sharma", email = "is2919@nyu.edu" }
 ]
 classifiers = [
     "Programming Language :: Python :: 3",

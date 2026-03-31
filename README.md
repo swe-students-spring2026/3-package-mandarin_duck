@@ -143,6 +143,6 @@ git push origin feature/your-feature
 ## Founders
 - [Adam Soliman](https://github.com/adamsolimancs/)
 - [Jeffrey Solano](https://github.com/jeffnoso/)
-- 
-- 
-- 
+- [Ishaan Sharma](https://github.com/is2919-cloud/)
+- [Adam Shin](https://github.com/aus2003)
+- [Faizan Shamsi](https://github.com/17faizan)
