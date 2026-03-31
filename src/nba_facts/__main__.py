@@ -29,11 +29,11 @@ def main():
     if args.random:
         print(getFact(data))
     elif args.team:
-        print(getTeam(args.team, data))
+        print(getTeam(data, args.team))
     elif args.decade:
-        print(getDecade(args.decade, data))
+        print(getDecade(data, args.decade))
     elif args.position:
-        print(getPosition(args.position, data))
+        print(getPosition(data, args.position))
     else:
         print("No valid arguments provided. Use --help for usage information.")
 
