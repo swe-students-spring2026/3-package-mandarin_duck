@@ -139,3 +139,26 @@ class TestGetPosition:
     def test_getPosition_invalid_position_raises_indexerror(self, data):
         with pytest.raises(IndexError):
             getPosition(data, "Waterboy")
+
+
+class TestGetTeam:
+    def test_getTeam_returns_string_for_valid_team(self, data):
+        actual = getTeam(data, "Boston Celtics")
+        assert isinstance(
+            actual, str
+        ), f"Expected getTeam() to return string, got {type(actual)}"
+
+    def test_getTeam_returns_nonempty_string(self, data):
+        actual = getTeam(data, "Boston Celtics")
+        assert len(actual.strip()) > 0, "Expected getTeam() to return non-empty string"
+
+    def test_getTeam_returns_fact_from_requested_team(self, data):
+        valid_facts = [fact["fact"] for fact in data["Boston Celtics"]]
+        actual = getTeam(data, "Boston Celtics")
+        assert (
+            actual in valid_facts
+        ), "Expected getTeam() to return a fact for Boston Celtics"
+
+    def test_getTeam_invalid_team_raises_indexerror(self, data):
+        with pytest.raises(IndexError):
+            getTeam(data, "fake team")
