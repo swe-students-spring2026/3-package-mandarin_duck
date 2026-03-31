@@ -1,7 +1,7 @@
 [![CI](https://github.com/swe-students-spring2026/3-package-mandarin_duck/actions/workflows/ci.yml/badge.svg)](https://github.com/swe-students-spring2026/3-package-mandarin_duck/actions/workflows/ci.yml)
 
 # nba_facts - Python Package Exercise
-#### PyPI Website Link (TODO)
+#### [PyPI Website Link](https://test.pypi.org/project/nba-facts/0.1.0/)
 
 Our team made a Python package that provides NBA facts based on user inputs like team, player, decade, or position, with functions designed to return random or category-specific insights about basketball history and players.
 
@@ -86,7 +86,6 @@ cd 3-package-mandarin_duck
 ### 2. Install dependencies
 ```bash
 pipenv install --dev
-pipenv install -e
 ```
 
 ### 3. Run tests
@@ -99,6 +98,11 @@ pipenv run pytest
 pipenv run python -m build
 ```
 
+### 5. Run the example package command
+```bash
+pipenv run python -m nba_facts --random
+pipenv run python -m nba_facts --team "Boston Celtics"
+```
 
 
 
