@@ -4,8 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+pytest = "*"
+nba-facts = {file = ".", editable = true}
 
 [dev-packages]
+pytest = "*"
+build = "*"
 
 [requires]
 python_version = "3.13"
