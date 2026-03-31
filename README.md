@@ -104,7 +104,36 @@ pipenv run python -m build
 
 ## How to contribute
 
+### 1. Create a feature branch
+```bash
+git checkout -b feature/your-feature
+```
 
+### 2. Make changes and test
+```bash
+pipenv run pytest
+```
+
+### 3. Commit your changes
+```bash
+git add .
+git commit -m "Add feature..."
+```
+
+### 4. Push to GitHub
+```bash
+git push origin feature/your-feature
+```
+
+### 5. Open a Pull Request
+- Create a pull request to the main branch
+
+### 6. Code Review
+- A teammate reviews your code
+- Tests are run and functionality is verified
+
+### 7. Merge
+- Merge the pull request into main after approval
 
 
 ## Founders
