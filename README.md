@@ -17,7 +17,7 @@ data = parseJSON()
 print(getFact(data))
 ```
 
-### Documentation
+## Documentation
 
 All examples below use the functions defined in `src/nba_facts/facts.py`.
 
@@ -76,19 +76,40 @@ print(getTeam(data, "Boston Celtics"))
 ```
 
 
-### How to configure and run the project
+## How to configure and run the project
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/swe-students-spring2026/3-package-mandarin_duck.git
+cd 3-package-mandarin_duck
+```
+### 2. Install dependencies
+```bash
+pipenv install --dev
+pipenv install -e
+```
+
+### 3. Run tests
+```bash
+pipenv run pytest
+```
+
+### 4. Build the package
+```bash
+pipenv run python -m build
+```
 
 
 
 
-### How to contribute
+## How to contribute
 
 
 
 
-### Founders
+## Founders
 - [Adam Soliman](https://github.com/adamsolimancs/)
-- 
+- [Jeffrey Solano](https://github.com/jeffnoso/)
 - 
 - 
 - 
