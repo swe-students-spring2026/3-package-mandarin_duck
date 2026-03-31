@@ -109,3 +109,33 @@ class TestGetDecade:
     def test_getDecade_invalid_decade_raises_indexerror(self, data):
         with pytest.raises(IndexError):
             getDecade(data, "3000s")
+
+
+class TestGetPosition:
+    def test_getPosition_returns_string_for_valid_position(self, data):
+        actual = getPosition(data, "Point Guard")
+        assert isinstance(
+            actual, str
+        ), f"Expected getPosition() to return string, got {type(actual)}"
+
+    def test_getPosition_returns_non_empty_string(self, data):
+        actual = getPosition(data, "Point Guard")
+        assert (
+            len(actual.strip()) > 0
+        ), "Expected getPosition() to return non-empty string"
+
+    def test_getPosition_returns_fact_from_requested_position(self, data):
+        valid_facts = [
+            fact["fact"]
+            for team_facts in data.values()
+            for fact in team_facts
+            if fact["position"] == "Point Guard"
+        ]
+        actual = getPosition(data, "Point Guard")
+        assert (
+            actual in valid_facts
+        ), "Expected getPosition() to return a fact for Point Guard"
+
+    def test_getPosition_invalid_position_raises_indexerror(self, data):
+        with pytest.raises(IndexError):
+            getPosition(data, "Waterboy")
